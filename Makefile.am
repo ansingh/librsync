@@ -59,7 +59,7 @@ bin_PROGRAMS = rdiff
 rdiff_SOURCES = rdiff.c isprefix.c isprefix.h librsync.h librsync-config.h \
 	trace.h
 
-rdiff_LDADD = librsync.la
+rdiff_LDADD = librsync.la -lpopt
 
 rdiff_DEPENDENCIES = librsync.la
 
