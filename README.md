@@ -77,6 +77,17 @@ destination is controlled by `--prefix` and related options to `./configure`.
 
     $ sudo make install
 
+## Note for mac
+
+In order to build a universal lib, you will need to add CFLAGS and LDFLAGS for
+both i386 and x86_64.
+
+	$ ./configure CFLAGS="-arch i386 -arch x86_64" LDFLAGS="-arch i386 -arch x86_64"
+
+For a dylib, use "--enable-static=no --enable-shared=yes"
+
+	$ ./configure --enable-static=no --enable-shared=yes
+
 ## Note for Windows
 
 With cygwin you can build using gcc as under a normal unix system. It
